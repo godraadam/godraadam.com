@@ -1,0 +1,23 @@
+{
+  "name": "my-site-alpine-tw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "npx tailwindcss -i ./src/styles.css -o ./public/styles.css --watch",
+    "build-js": "npx esbuild src/script.js --outfile=public/script.js --bundle --watch"
+  },
+  "author": "godraadam",
+  "license": "ISC",
+  "dependencies": {
+    "@shaun/alpinejs-router": "^1.2.1",
+    "alpinejs": "^3.10.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "esbuild": "^0.15.10",
+    "postcss": "^8.4.17",
+    "tailwindcss": "^3.1.8"
+  }
+}
