@@ -1,0 +1,111 @@
+---
+
+---
+
+<header
+  class="w-full p-8 fixed top-8 data-[show=false]:-top-44 transition-all duration-500 ease z-50 motion-reduce:transition-none animate-none:transition-none"
+  id="header"
+>
+  <nav class="flex justify-between md:grid md:grid-cols-12 font-light text-lg">
+    <a href="#main" class="col-span-6 dark:text-white" id="name">Adam Godra</a>
+    <div class="col-span-3">
+      <h2 class="pb-3 dark:text-white">Menu</h2>
+      <ul class="space-y-2 text-gray-400">
+        <li>
+          <a
+            href="#about"
+            class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors ease-in-out"
+            >About</a
+          >
+        </li>
+        <li>
+          <a
+            href="#work"
+            class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors ease-in-out"
+            >Work</a
+          >
+        </li>
+        <li>
+          <a
+            href="#contact"
+            class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors ease-in-out"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div class="col-span-3">
+      <h2 class="pb-3 dark:text-white">Settings</h2>
+      <ul class="text-gray-400">
+        <li>
+          <button
+            id="light-mode"
+            class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors ease-in-out cursor-pointer dark:hidden"
+          >
+            Light mode
+          </button>
+        </li>
+        <li>
+          <buttons
+            id="dark-mode"
+            class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors ease-in-out cursor-pointer hidden dark:block"
+          >
+            Dark mode
+          </buttons>
+        </li>
+        <li>
+          <button
+            id="animations-off"
+            class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors ease-in-out cursor-pointer pt-2 hidden animate-none:block"
+            >Animations off</button
+          >
+        </li>
+        <li>
+          <button
+            id="animations-on"
+            class="hover:text-gray-900 dark:hover:text-gray-300 transition-colors ease-in-out cursor-pointer pt-2 animate-none:hidden"
+            >Animations on</button
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const header = document.querySelector("#header");
+  let lastScroll = 0;
+  document.addEventListener("scroll", () => {
+    const newScroll = window.pageYOffset;
+    newScroll > 20
+      ? header?.setAttribute("data-show", "false")
+      : header?.setAttribute("data-show", "true");
+    lastScroll = newScroll;
+  });
+
+  const animationsOffButton = document.querySelector("#animations-off");
+  animationsOffButton?.addEventListener("click", () => {
+    setAnimate(false);
+  });
+
+  const animationsOnButton = document.querySelector("#animations-on");
+  animationsOnButton?.addEventListener("click", () => {
+    setAnimate(true);
+  });
+
+  const darkModeButton = document.querySelector("#dark-mode");
+  const lightModeButton = document.querySelector("#light-mode");
+
+  darkModeButton?.addEventListener("click", () => setTheme("light"));
+  lightModeButton?.addEventListener("click", () => setTheme("dark"));
+
+  function setTheme(theme: "light" | "dark") {
+    document.documentElement.classList.toggle("dark", theme == "dark");
+    localStorage.setItem("theme", theme);
+  }
+
+  function setAnimate(animate: boolean) {
+    document.documentElement.classList.toggle("animate-none", animate);
+    localStorage.setItem("animate", animate ? "true" : "false");
+  }
+</script>

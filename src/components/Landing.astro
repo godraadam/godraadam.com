@@ -1,0 +1,226 @@
+---
+import Navbar from "@/components/Navbar.astro";
+import HilbertCurve from "@/components/HilbertCurve.astro";
+---
+
+<Navbar />
+<main
+  class="relative font-switzer bg-white dark:bg-black pt-12 px-8 pb-20"
+  id="main"
+>
+  <div class="h-screen flex flex-col">
+    <section class="flex flex-col grow items-center justify-center">
+      <div class="h-1/2 aspect-square px-10">
+        <HilbertCurve />
+      </div>
+      <div
+        id="phrase"
+        class="absolute font-light bottom-[calc(100%-100vh+48px)] left-8 text-light text-lg w-fit dark:text-white data-[show=false]:bottom-12 transition-all duration-700 ease motion-reduce:transition-none animate-none:transition-none"
+      >
+        Developer. Minimalist. Maximalist.
+      </div>
+      <div
+        id="location"
+        class="absolute hidden md:block font-light bottom-[calc(100%-100vh+48px)] right-8 text-light text-lg w-fit dark:text-white data-[show=false]:bottom-12 transition-all duration-700 ease motion-reduce:transition-none animate-none:transition-none"
+      >
+        Cluj-Napoca, RO
+        <time id="local-time"></time>
+      </div>
+    </section>
+  </div>
+  <section class="lg:grid lg:grid-cols-12 pb-20 scroll-mt-16" id="about">
+    <h2 class="text-4xl text-gray-400 pb-20 lg:col-start-3 lg:col-end-6">
+      About
+    </h2>
+    <div class="lg:col-start-7 lg:col-end-12 space-y-4 font-light font-satoshi">
+      <p class="text-xl font-normal pb-4 dark:text-white">
+        I am a Digital Product Engineer. Currently working at <a
+          href="https://webgurus.io"
+          target="_blank"
+          class="border-b dark:border-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors ease-in-out"
+          >WebGurus</a
+        >.
+      </p>
+      <p class="dark:text-gray-300 text-gray-700 text-lg">
+        I create digital products on the web, from inception through design and
+        implementation, to launch. I obsess over details, I believe excellence
+        comes from attention to details.
+      </p>
+      <p class="dark:text-gray-300 text-gray-700 text-lg">
+        I've always been driven by curiosity, and I'm always eager to learn. My
+        current areas of interest include cryptography, information theory,
+        computability theory, and quantum computing.
+      </p>
+      <p class="dark:text-gray-300 text-gray-700 text-lg">
+        Outside of work, I bring that same maximalist mindset to my hobbies. I
+        enjoy dialing in the perfect espresso, mastering Neapolitan pizza, and
+        fine-tuning my road bike to the last grams. It's less about perfection
+        and more about enjoying the process of figuring things out.
+      </p>
+      <p class="dark:text-gray-300 text-gray-700 text-lg">
+        I try to live a minimalist life. I believe less is more, whether that's
+        physical or digital. Clutter gets in the way of focus. I'd rather have a
+        few well-made, well-used tools than a shelf full of things that don't
+        serve a clear purpose. The same goes for design and code: simplicity
+        tends to outlast complexity, and clarity is worth chasing. Tools and
+        applications need to be out of the way but always at hand.
+      </p>
+    </div>
+  </section>
+  <section class="lg:grid lg:grid-cols-12 pb-20 scroll-mt-16" id="work">
+    <h2 class="text-4xl text-gray-400 pb-20 col-start-3 col-end-6">Work</h2>
+    <div
+      class="lg:col-start-7 lg:col-end-12 space-y-16 font-light font-satoshi dark:text-white"
+    >
+      <div class="space-y-4">
+        <h3 class="pb-2 text-xl font-normal">
+          <a
+            href="https://quino.ai"
+            target="_blank"
+            class="hover:text-gray-600 dark:hover:text-gray-400 border-b border-black dark:border-white transition-colors ease-in-out"
+          >
+            Quino.ai
+          </a>
+          {" "}is an AI assisted learning platform for university students.
+        </h3>
+        <p class="dark:text-gray-300 text-gray-600 text-lg">
+          Quino is a startup project developed by a team of young hackers and
+          entrepreneurs. I contributed initially as (co-) tech lead to the
+          application backend, later getting involved in UI development as well.
+        </p>
+      </div>
+      <div class="space-y-4">
+        <h3 class="pb-2 text-xl font-normal">
+          <a
+            href="https://galaxis.xyz"
+            target="_blank"
+            class="hover:text-gray-600 dark:hover:text-gray-400 border-b border-black dark:border-white transition-colors ease-in-out"
+          >
+            Galaxis Community Space
+          </a>
+          {" "}is an on-chain, no-code community space builder.
+        </h3>
+        <p class="dark:text-gray-300 text-gray-600 text-lg">
+          Galaxis is a blockchain based suite of services developed by a
+          singaporean company of the same name. I developed smart contracts that
+          govern token distribution, transtacions and royalty collection, as
+          well as a custom made, distributed Discord-like application based on
+          the Matrix protocol.
+        </p>
+      </div>
+      <div class="space-y-4">
+        <h3 class="pb-2 text-xl font-normal">
+          <a
+            href="https://biltgroup.ro"
+            target="_blank"
+            class="hover:text-gray-600 dark:hover:text-gray-400 border-b border-black dark:border-white transition-colors ease-in-out"
+          >
+            Bilt Group website
+          </a>
+          {" "}is a portfolio site for an architecture & construction firm.
+        </h3>
+        <p class="dark:text-gray-300 text-gray-600 text-lg">
+          One of my freelance projects, that I developed solo, from design to
+          implementation. It was the first work I got to try out myself as not
+          only a developer, but also as UI/UX engineer.
+        </p>
+      </div>
+      <div class="space-y-4">
+        <h3 class="pb-2 text-xl font-normal">
+          <a
+            href="https://biltgroup.ro"
+            target="_blank"
+            class="hover:text-gray-600 dark:hover:text-gray-400 border-b border-black dark:border-white transition-colors ease-in-out"
+          >
+            Privy Messenger
+          </a>
+          {" "}is a fully distributed, peer-to-peer, end-to-end encrypted
+          messaging application.
+        </h3>
+        <p class="dark:text-gray-300 text-gray-600 text-lg">
+          I've always considered myself a digital privacy advocate. Privy
+          Messenger was my take on a truly peer-to-peer messaging soliution,
+          that despite not using centralized data servers, still allowed user to
+          sync their messages between devices. This project was my bachelor's
+          thesis, and was published in <a
+            href="https://ieeexplore.ieee.org/document/10274936"
+            target="_blank"
+            class="hover:text-gray-600 dark:hover:text-gray-400 border-b border-black dark:border-white transition-colors ease-in-out"
+            >IEEE</a
+          >.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="lg:grid lg:grid-cols-12 pb-20 scroll-mt-16" id="contact">
+    <h2 class="text-4xl text-gray-400 pb-20 col-start-3 col-end-6">Contact</h2>
+    <ul
+      class="lg:col-start-7 lg:col-end-12 space-y-4 font-light font-satoshi dark:text-white text-lg"
+    >
+      <li>
+        <a target="_blank" class="" href="mailto:godra.adam@gmail.com">Email</a>
+      </li>
+      <li>
+        <a target="_blank" class="" href="https://cv.godraadam.com"
+          >Full resume</a
+        >
+      </li>
+      <li>
+        <a
+          target="_blank"
+          class="hover:text-gray-600 dark:hover:text-gray-400 transition-colors ease-in-out"
+          href="https://linkedin.com/in/godraadam"
+          target="_blank">LinkedIn</a
+        >
+      </li>
+      <li>
+        <a
+          target="_blank"
+          class="hover:text-gray-600 dark:hover:text-gray-400 transition-colors ease-in-out"
+          href="https://github.com/godraadam"
+        >
+          GitHub
+        </a>
+      </li>
+      <li>
+        <a
+          target="_blank"
+          class="hover:text-gray-600 dark:hover:text-gray-400 transition-colors ease-in-out"
+          href="https://instagram.com/godraadam"
+        >
+          Instagram
+        </a>
+      </li>
+    </ul>
+  </section>
+</main>
+<footer class="text-sm text-gray-500 px-8 pb-8 w-full flex justify-end">
+  Made with Astro and TailwindCSS, hosted on Vercel.
+</footer>
+
+<script>
+  const phraseElement = document.getElementById("phrase");
+  const locationElement = document.getElementById("location");
+  document.addEventListener("scroll", () => {
+    const newScroll = window.pageYOffset;
+    if (newScroll > 40) {
+      phraseElement?.setAttribute("data-show", "false");
+      locationElement?.setAttribute("data-show", "false");
+    } else {
+      phraseElement?.setAttribute("data-show", "true");
+      locationElement?.setAttribute("data-show", "true");
+    }
+  });
+
+  const localTimeElement = document.getElementById("local-time");
+
+  setInterval(() => {
+    localTimeElement?.setHTMLUnsafe(
+      new Intl.DateTimeFormat("en-GB", {
+        timeZone: "Europe/Bucharest",
+        hour: "2-digit",
+        minute: "2-digit",
+      }).format(new Date())
+    );
+  }, 1000);
+</script>

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Switzer";
+  src: url("./assets/fonts/switzer/Switzer-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Switzer";
+  src: url("./assets/fonts/switzer/Switzer-VariableItalic.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/satoshi/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/fonts/satoshi/Satoshi-VariableItalic.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+
+@theme {
+  --font-switzer: "Switzer";
+  --font-satoshi: "Satoshi";
+}
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant animate-none (&:where(.animate-none, .animate-none *));
