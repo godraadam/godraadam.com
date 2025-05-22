@@ -7,7 +7,7 @@
   id="header"
 >
   <nav class="flex justify-between md:grid md:grid-cols-12 font-light text-lg">
-    <a href="#main" class="col-span-6 dark:text-white" id="name">Adam Godra</a>
+    <a href="#main" class="md:col-span-5 dark:text-white" id="name">Adam Godra</a>
     <div class="md:col-span-3">
       <h2 class="pb-3 dark:text-white">Menu</h2>
       <ul class="space-y-1 md:space-y-2 text-gray-400">
@@ -34,7 +34,7 @@
         </li>
       </ul>
     </div>
-    <div class="col-span-3">
+    <div class="md:col-span-3">
       <h2 class="pb-3 dark:text-white">Settings</h2>
       <ul class="text-gray-400">
         <li>
@@ -73,28 +73,26 @@
 </header>
 
 <script>
-  const header = document.querySelector("#header");
-  let lastScroll = 0;
+  const header = document.getElementById("header");
   document.addEventListener("scroll", () => {
     const newScroll = window.pageYOffset;
     newScroll > 20
       ? header?.setAttribute("data-show", "false")
       : header?.setAttribute("data-show", "true");
-    lastScroll = newScroll;
   });
 
-  const animationsOffButton = document.querySelector("#animations-off");
+  const animationsOffButton = document.getElementById("animations-off");
   animationsOffButton?.addEventListener("click", () => {
     setAnimate(false);
   });
 
-  const animationsOnButton = document.querySelector("#animations-on");
+  const animationsOnButton = document.getElementById("animations-on");
   animationsOnButton?.addEventListener("click", () => {
     setAnimate(true);
   });
 
-  const darkModeButton = document.querySelector("#dark-mode");
-  const lightModeButton = document.querySelector("#light-mode");
+  const darkModeButton = document.getElementById("dark-mode");
+  const lightModeButton = document.getElementById("light-mode");
 
   darkModeButton?.addEventListener("click", () => setTheme("light"));
   lightModeButton?.addEventListener("click", () => setTheme("dark"));
