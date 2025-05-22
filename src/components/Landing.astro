@@ -10,8 +10,18 @@ import HilbertCurve from "@/components/HilbertCurve.astro";
 >
   <div class="h-screen flex flex-col">
     <section class="flex flex-col grow items-center justify-center">
-      <div class="h-1/2 aspect-square px-10">
+      <div class="h-1/2 aspect-square px-10 group">
         <HilbertCurve />
+        <figcaption
+          class="text-sm tracking-wide text-light pt-2.5 text-center font-satoshi italic text-gray-600 dark:text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity ease duration-500 motion-reduce:transition-none animate-none:transition-none"
+        >
+          Space filling <a
+            href="https://en.wikipedia.org/wiki/Hilbert_curve"
+            target="_blank"
+            class="hover:text-black transition-colors ease dark:hover:text-white border-b dark:border-white"
+            >Hilbert curve</a
+          >, 5 iterations
+        </figcaption>
       </div>
       <div
         id="phrase"
@@ -29,10 +39,12 @@ import HilbertCurve from "@/components/HilbertCurve.astro";
     </section>
   </div>
   <section class="lg:grid lg:grid-cols-12 pb-20 scroll-mt-16" id="about">
-    <h2 class="text-4xl text-gray-400 pb-20 lg:col-start-3 lg:col-end-6">
+    <h2
+      class="text-5xl text-gray-400 pb-12 lg:col-start-3 lg:col-end-5 font-switzer font-light text-right"
+    >
       About
     </h2>
-    <div class="lg:col-start-7 lg:col-end-12 space-y-4 font-light font-satoshi">
+    <div class="lg:col-start-6 lg:col-end-11 space-y-4 font-light font-satoshi">
       <p class="text-xl font-normal pb-4 dark:text-white">
         I am a Digital Product Engineer. Currently working at <a
           href="https://webgurus.io"
@@ -41,36 +53,47 @@ import HilbertCurve from "@/components/HilbertCurve.astro";
           >WebGurus</a
         >.
       </p>
-      <p class="dark:text-gray-300 text-gray-700 text-lg">
-        I create digital products on the web, from inception through design and
-        implementation, to launch. I obsess over details, I believe excellence
-        comes from attention to details.
-      </p>
-      <p class="dark:text-gray-300 text-gray-700 text-lg">
-        I've always been driven by curiosity, and I'm always eager to learn. My
-        current areas of interest include cryptography, information theory,
-        computability theory, and quantum computing.
-      </p>
-      <p class="dark:text-gray-300 text-gray-700 text-lg">
-        Outside of work, I bring that same maximalist mindset to my hobbies. I
-        enjoy dialing in the perfect espresso, mastering Neapolitan pizza, and
-        fine-tuning my road bike to the last grams. It's less about perfection
-        and more about enjoying the process of figuring things out.
-      </p>
-      <p class="dark:text-gray-300 text-gray-700 text-lg">
-        I try to live a minimalist life. I believe less is more, whether that's
-        physical or digital. Clutter gets in the way of focus. I'd rather have a
-        few well-made, well-used tools than a shelf full of things that don't
-        serve a clear purpose. The same goes for design and code: simplicity
-        tends to outlast complexity, and clarity is worth chasing. Tools and
-        applications need to be out of the way but always at hand.
-      </p>
+      <div
+        class="md:columns-2 md:gap-6 md:space-y-8 lg:space-y-4 lg:gap-0 lg:columns-1 xl:columns-2 xl:gap-6 xl:space-y-8 space-y-4"
+      >
+        <p class="dark:text-gray-300 text-gray-700 text-lg">
+          I create digital products on the web, from inception through design
+          and implementation, to launch. I obsess over details, I believe
+          excellence comes from attention to details.
+        </p>
+        <p class="dark:text-gray-300 text-gray-700 text-lg">
+          I've always been driven by curiosity, and I'm always eager to learn.
+          My current areas of interest include cryptography, information theory,
+          computability theory, and quantum computing.
+        </p>
+        <p
+          class="dark:text-gray-300 text-gray-700 text-lg md:break-after-column lg:break-after-auto xl:break-after-column"
+        >
+          Outside of work, I bring that same maximalist mindset to my hobbies. I
+          enjoy dialing in the perfect espresso, mastering Neapolitan pizza, and
+          fine-tuning my road bike to the last grams. It's less about perfection
+          and more about enjoying the process of figuring things out.
+        </p>
+        <p class="dark:text-gray-300 text-gray-700 text-lg">
+          I try to live a minimalist life. I believe less is more, whether
+          that's physical or digital. Clutter gets in the way of focus. I'd
+          rather have a few well-made, well-used tools than a shelf full of
+          things that don't serve a clear purpose. The same goes for design and
+          code: simplicity tends to outlast complexity, and clarity is worth
+          chasing. Tools and applications need to be out of the way but always
+          at hand.
+        </p>
+      </div>
     </div>
   </section>
   <section class="lg:grid lg:grid-cols-12 pb-20 scroll-mt-16" id="work">
-    <h2 class="text-4xl text-gray-400 pb-20 col-start-3 col-end-6">Work</h2>
+    <h2
+      class="text-5xl text-gray-400 pb-12 lg:col-start-3 lg:col-end-5 font-switzer font-light text-right"
+    >
+      Work
+    </h2>
     <div
-      class="lg:col-start-7 lg:col-end-12 space-y-16 font-light font-satoshi dark:text-white"
+      class="lg:col-start-6 lg:col-end-11 space-y-16 font-light font-satoshi dark:text-white"
     >
       <div class="space-y-4">
         <h3 class="pb-2 text-xl font-normal">
@@ -140,8 +163,8 @@ import HilbertCurve from "@/components/HilbertCurve.astro";
         <p class="dark:text-gray-300 text-gray-600 text-lg">
           I've always considered myself a digital privacy advocate. Privy
           Messenger was my take on a truly peer-to-peer messaging soliution,
-          that despite not using centralized data servers, still allowed users to
-          sync their messages between devices. This project was my bachelor's
+          that despite not using centralized data servers, still allowed users
+          to sync their messages between devices. This project was my bachelor's
           thesis, and was published in <a
             href="https://ieeexplore.ieee.org/document/10274936"
             target="_blank"
@@ -153,16 +176,26 @@ import HilbertCurve from "@/components/HilbertCurve.astro";
     </div>
   </section>
   <section class="lg:grid lg:grid-cols-12 pb-20 scroll-mt-16" id="contact">
-    <h2 class="text-4xl text-gray-400 pb-20 col-start-3 col-end-6">Contact</h2>
+    <h2
+      class="text-5xl text-gray-400 pb-12 lg:col-start-3 lg:col-end-5 font-switzer font-light text-right"
+    >
+      Contact
+    </h2>
     <ul
-      class="lg:col-start-7 lg:col-end-12 space-y-4 font-light font-satoshi dark:text-white text-lg"
+      class="lg:col-start-6 lg:col-end-12 space-y-4 font-light font-satoshi dark:text-white text-lg"
     >
       <li>
-        <a target="_blank" class="hover:text-gray-600 dark:hover:text-gray-400 transition-colors ease-in-out" href="mailto:godra.adam@gmail.com">Email</a>
+        <a
+          target="_blank"
+          class="hover:text-gray-600 dark:hover:text-gray-400 transition-colors ease-in-out"
+          href="mailto:godra.adam@gmail.com">Email</a
+        >
       </li>
       <li>
-        <a target="_blank" class="hover:text-gray-600 dark:hover:text-gray-400 transition-colors ease-in-out" href="https://cv.godraadam.com"
-          >Full resume</a
+        <a
+          target="_blank"
+          class="hover:text-gray-600 dark:hover:text-gray-400 transition-colors ease-in-out"
+          href="https://cv.godraadam.com">Full resume</a
         >
       </li>
       <li>
@@ -194,7 +227,9 @@ import HilbertCurve from "@/components/HilbertCurve.astro";
     </ul>
   </section>
 </main>
-<footer class="text-sm text-gray-500 px-8 pb-8 w-full flex md:justify-end dark:bg-black">
+<footer
+  class="text-sm text-gray-500 px-8 pb-8 w-full flex md:justify-end dark:bg-black"
+>
   Made with Astro and TailwindCSS, hosted on Vercel.
 </footer>
 
