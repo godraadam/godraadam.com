@@ -25,13 +25,13 @@ import HilbertCurve from "@/components/HilbertCurve.astro";
       </div>
       <div
         id="phrase"
-        class="absolute font-light bottom-[calc(100%-100vh+48px)] left-8 text-light text-lg w-fit dark:text-white data-[show=false]:bottom-2 transition-all duration-700 ease motion-reduce:transition-none animate-none:transition-none"
+        class="absolute font-light bottom-[calc(100%-100vh+48px)] left-8 text-light text-lg w-fit dark:text-gray-200 data-[show=false]:bottom-2 transition-all duration-700 ease motion-reduce:transition-none animate-none:transition-none"
       >
         Developer. Minimalist. Maximalist.
       </div>
       <div
         id="location"
-        class="absolute hidden md:block font-light bottom-[calc(100%-100vh+48px)] right-8 text-light text-lg w-fit dark:text-white data-[show=false]:bottom-2 transition-all duration-700 ease motion-reduce:transition-none animate-none:transition-none"
+        class="absolute hidden md:block font-light bottom-[calc(100%-100vh+48px)] right-8 text-light text-lg w-fit dark:text-gray-200 data-[show=false]:bottom-2 transition-all duration-700 ease motion-reduce:transition-none animate-none:transition-none"
       >
         Cluj-Napoca, RO
         <time id="local-time"></time>
@@ -45,13 +45,13 @@ import HilbertCurve from "@/components/HilbertCurve.astro";
       About
     </h2>
     <div class="lg:col-start-6 lg:col-end-11 space-y-4 font-light font-satoshi">
-      <p class="text-xl font-normal pb-4 dark:text-white">
+      <p class="text-xl font-normal pb-4 dark:text-gray-200">
         I am a Digital Product Engineer. Currently working at <a
-          href="https://webgurus.io"
+          href="https://peakfs.io"
           target="_blank"
           class="border-b dark:border-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors ease-in-out"
-          >WebGurus</a
-        >.
+          >Peak Financial Services</a
+        > making card payments go brrrr.
       </p>
       <div
         class="md:columns-2 md:gap-6 md:space-y-8 lg:space-y-4 lg:gap-0 lg:columns-1 xl:columns-2 xl:gap-6 xl:space-y-8 space-y-4"
@@ -93,8 +93,25 @@ import HilbertCurve from "@/components/HilbertCurve.astro";
       Work
     </h2>
     <div
-      class="lg:col-start-6 lg:col-end-11 space-y-16 font-light font-satoshi dark:text-white"
+      class="lg:col-start-6 lg:col-end-11 space-y-16 font-light font-satoshi dark:text-gray-200"
     >
+      <div class="space-y-4">
+        <h3 class="pb-2 text-xl font-normal">
+          <a
+            href="https://growmail.com"
+            target="_blank"
+            class="hover:text-gray-600 dark:hover:text-gray-400 border-b border-black dark:border-white transition-colors ease-in-out"
+          >
+            GrowMail
+          </a>
+          {" "}provides targeted print media marketing campaign services.
+        </h3>
+        <p class="dark:text-gray-300 text-gray-600 text-lg">
+          GrowMail enables marketers to create targeted campaigns in the US,
+          with location based demographic information, tracking tools, all in
+          one modern online platform.
+        </p>
+      </div>
       <div class="space-y-4">
         <h3 class="pb-2 text-xl font-normal">
           <a
@@ -182,7 +199,7 @@ import HilbertCurve from "@/components/HilbertCurve.astro";
       Contact
     </h2>
     <ul
-      class="lg:col-start-6 lg:col-end-12 space-y-4 font-light font-satoshi dark:text-white text-lg"
+      class="lg:col-start-6 lg:col-end-12 space-y-4 font-light font-satoshi dark:text-gray-200 text-lg"
     >
       <li>
         <a
@@ -228,9 +245,9 @@ import HilbertCurve from "@/components/HilbertCurve.astro";
   </section>
 </main>
 <footer
-  class="text-sm text-gray-500 px-8 pb-8 w-full flex md:justify-end dark:bg-black"
+  class="text-sm text-gray-500 font-light px-8 pb-8 w-full flex md:justify-end dark:bg-black"
 >
-  Made with Astro and TailwindCSS, hosted on Vercel.
+  Made with Astro and TailwindCSS, hosted on Netlify.
 </footer>
 
 <script>
